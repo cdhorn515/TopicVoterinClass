@@ -10,5 +10,6 @@ public interface TopicRepository {
     //create helper methods findall, findbyid, add
     List<Topic> findAll();
 
+    void add(String title, String description);
 
 }

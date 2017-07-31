@@ -22,6 +22,12 @@ public class TopicRepositoryImpl implements TopicRepository {
          return jdbcTemplate.query("SELECT * FROM topic", new TopicMapper());
     }
 
+
+    @Override
+    public void add(String title, String description) {
+        jdbcTemplate.update("INSERT INTO topic (title, description) VALUES (?, ?)", title, description);
+    }
+
     private static class TopicMapper implements RowMapper<Topic> {
 
         @Override

@@ -7,6 +7,12 @@
 <body>
 <h1>Welcome to topic voter</h1>
 
+<form action="/createTopic" method="post">
+    <input type="text" name="title" required="required"/>
+    <input type="text" name="description" />
+    <input type="submit" value="Add"/>
+</form>
+
 <ul>
     <!--looping over getting each title in topics, can concatenate-->
     <!--<li th:each="topic : ${topics}" th:text="${topic.title} + ' : ' + ${topic.description}">-->
