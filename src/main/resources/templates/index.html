@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>Topic Voter Application</title>
 </head>
 <body>
+<h1>Welcome to topic voter</h1>
 
+<ul>
+    <!--looping over getting each title in topics, can concatenate-->
+    <!--<li th:each="topic : ${topics}" th:text="${topic.title} + ' : ' + ${topic.description}">-->
+        <!--can also write on separate lines as-->
+    <li th:each="topic : ${topics}">
+        <span th:text="${topic.title}"></span>
+        :
+        <span th:text="${topic.description}"></span>
+    </li>
+</ul>
 </body>
 </html>
