@@ -12,4 +12,6 @@ public interface TopicRepository {
 
     void add(String title, String description);
 
+    void delete(long id);
+
 }
